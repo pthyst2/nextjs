@@ -11,6 +11,9 @@ const Home: NextPage = ({ blogs }: any ) => {
   const [metaDescription, setDescription] = useState('Creating your 3D space');
   const [metaImage, setImage] = useState('/images/1.jpg');
   const [metaKeyword, setKeyword] = useState('empaty,space');
+  const [metaUrl, setUrl] = useState('https://nextjs-eight-lovat-69.vercel.app/')
+  const [metaType, setType] = useState('website');
+  const [metaFBAppId, setFBAppId] = useState('1239721703482016');
   //#endregion
 
   return (
@@ -19,10 +22,12 @@ const Home: NextPage = ({ blogs }: any ) => {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="icon" href="/favicon.ico" />
+        <meta property='og:url' content={metaUrl} /> 
         <meta property='og:title' content={metaTitle} />
         <meta property='og:description' content={metaDescription} />
         <meta property='og:image' content={metaImage} />
-        <meta property='og:keyword' content={metaKeyword} /> 
+        <meta property='og:keyword' content={metaKeyword} />
+        <meta property='fb:app' content={metaFBAppId} /> 
       </Head>
       <LayoutHome>
         <div className='flex justify-center items-center min-h-[2000px]'>
