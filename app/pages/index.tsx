@@ -10,7 +10,7 @@ const Home: NextPage = ({ blogs }: any ) => {
   const [metaTitle, setTitle] = useState('Empaty');
   const [metaDescription, setDescription] = useState('Creating your 3D space');
   const [metaUrl, setUrl] = useState('https://nextjs-eight-lovat-69.vercel.app/')
-  const [metaImage, setImage] = useState(metaUrl + '/images/backgrounds/1.jpg');
+  const [metaImage, setImage] = useState(metaUrl + 'images/backgrounds/1.jpg');
   const [metaKeyword, setKeyword] = useState('empaty,space');
   const [metaType, setType] = useState('website');
   const [metaFBAppId, setFBAppId] = useState('1239721703482016');
