@@ -28,6 +28,7 @@ const Home: NextPage = ({ blogs }: any ) => {
         <meta property='og:image' content={metaImage} />
         <meta property='og:keyword' content={metaKeyword} />
         <meta property='fb:app' content={metaFBAppId} /> 
+        <meta property='og:type' content={metaType} /> 
       </Head>
       <LayoutHome>
         <div className='flex justify-center items-center min-h-[2000px]'>
