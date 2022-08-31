@@ -25,7 +25,7 @@ const Home: NextPage = ({ blogs }: any ) => {
         <meta property='og:url' content={metaUrl} /> 
         <meta property='og:title' content={metaTitle} />
         <meta property='og:description' content={metaDescription} />
-        <meta property='og:image' content={metaImage} />
+        <meta property='og:image' content="https://nextjs-eight-lovat-69.vercel.app/images/backgrounds/1.jpg" />
         <meta property='og:keyword' content={metaKeyword} />
         <meta property='fb:app' content={metaFBAppId} /> 
         <meta property='og:type' content={metaType} /> 
