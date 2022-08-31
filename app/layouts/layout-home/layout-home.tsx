@@ -1,12 +1,14 @@
-import BannerVideo from "../../partials/banner-video/banner-video"
-import Header from "../../partials/header/header"
-export default function LayoutHome({content}:any){
+import BannerImages from "../../partials/banner-images/banner-images"
+import Header from "../../partials/header/header";
+import { useState } from 'react';
+export default function LayoutHome({ children }: any){
+    const [imageType, setImageType] = useState('single');
     return (
         <>
             <Header /> 
-            <BannerVideo />
-            <main className="min-h-[2000px]">
-                { content }
+            <BannerImages type={ imageType } />
+            <main>
+                { children }
             </main>
         </>
     )
