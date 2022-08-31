@@ -10,7 +10,7 @@ const Home: NextPage = ({ blogs }: any ) => {
   const [metaTitle, setTitle] = useState('Empaty');
   const [metaDescription, setDescription] = useState('Creating your 3D space');
   const [metaUrl, setUrl] = useState('https://nextjs-eight-lovat-69.vercel.app/')
-  const [metaImage, setImage] = useState('/images/backgrounds/1.jpg');
+  const [metaImage, setImage] = useState(metaUrl + '/images/backgrounds/1.jpg');
   const [metaKeyword, setKeyword] = useState('empaty,space');
   const [metaType, setType] = useState('website');
   const [metaFBAppId, setFBAppId] = useState('1239721703482016');
@@ -25,9 +25,9 @@ const Home: NextPage = ({ blogs }: any ) => {
         <meta property='og:url' content={metaUrl} /> 
         <meta property='og:title' content={metaTitle} />
         <meta property='og:description' content={metaDescription} />
-        <meta property='og:image' content="https://nextjs-eight-lovat-69.vercel.app/images/backgrounds/1.jpg" />
+        <meta property='og:image' content={metaImage} />
         <meta property='og:keyword' content={metaKeyword} />
-        <meta property='fb:app' content={metaFBAppId} /> 
+        <meta property='fb:app_id' content={metaFBAppId} /> 
         <meta property='og:type' content={metaType} /> 
       </Head>
       <LayoutHome>
