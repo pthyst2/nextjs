@@ -1,12 +1,18 @@
-import BannerImages from "../../partials/banner-images/banner-images"
 import Header from "../../partials/header/header";
-import { useState } from 'react';
+import BannerImage from "../../partials/banner-image/banner-image";
 export default function LayoutHome({ children }: any){
-    const [imageType, setImageType] = useState('single');
+    const banner = {
+        type: 'logo-text',
+        image: '/images/backgrounds/1.jpg',
+        //title: 'Empaty',
+        description: 'Creating your 3D spaces',
+        logo: '/images/logos/logo-empaty.svg'
+    }
+
     return (
         <>
             <Header /> 
-            <BannerImages type={ imageType } />
+            <BannerImage input={banner}></BannerImage>
             <main>
                 { children }
             </main>
