@@ -6,7 +6,10 @@ export default function LayoutHome({ children }: any){
         image: '/images/backgrounds/1.jpg',
         //title: 'Empaty',
         description: 'Creating your 3D spaces',
-        logo: '/images/logos/logo-empaty.svg'
+        logo: '/images/logos/logo-empaty.svg',
+        /*children: <>
+            <h1 className="text-[#ff0000] text-[48px]">This is custom text</h1>
+        </>*/
     }
 
     return (

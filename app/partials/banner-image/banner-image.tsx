@@ -11,6 +11,9 @@ export default function BannerImage({ input }: any){
                 result = <LogoText logo={input.logo} description={input.description} />
                 break;
             }
+            case 'custom': {
+                result = <Custom children={input.children}/> 
+            }
         }
         return result;
     }
@@ -39,6 +42,13 @@ export function LogoText({ logo, description } : any){
             {
                 description ? <p className="text-[14px] md:text-[16px]">{description}</p> : <></>
             }
+        </div>
+    )
+}
+export function Custom({ children }: any ) {
+    return (
+        <div className="absolute top-[50%] left-[50%] z-[12] text-center -translate-x-[50%] -translate-y-[50%]">
+          { children }
         </div>
     )
 }

@@ -3,8 +3,9 @@ import type { GetServerSideProps, GetStaticProps, NextPage } from 'next';
 import { mockBlogs } from '../data/mocks/mockBlogs';
 import LayoutHome from '../layouts/layout-home/layout-home';
 import SeoHead from '../partials/seo-head/seo-head';
+import SectionHome from '../partials/section-home/section-home';
 const Home: NextPage = ({ blogs }: any ) => {
-  // For SEO
+  //#region SEO meta
   const meta = {
     title: 'Empaty',
     description: 'Creating your 3D spaces',
@@ -13,14 +14,22 @@ const Home: NextPage = ({ blogs }: any ) => {
     keyword: 'empaty,space',
     type: 'website'
   }
+  //#endregion
+
+  const sectionHome = {
+    title: 'Section 1',
+    backgroundColor: "#fcfcfc"
+  }
 
   return (
     <> 
       <SeoHead data={meta}></SeoHead>
       <LayoutHome>
-        <div className='flex justify-center items-center min-h-[2000px]'>
-          <p>Index Page</p>
-        </div>
+        <SectionHome input={sectionHome}>
+          <div className="flex justify-center items-center min-h-[200px]">
+            <p>This is section home</p>
+          </div>
+        </SectionHome>
       </LayoutHome>
     </>
   )
